@@ -7,38 +7,33 @@
         <link rel="stylesheet" href="style.css">
         <title>SISimulation</title>
     </head>
-    <body>
+    <body class="content">
         <header>
-            <h2> S.I. Simulation </h2>
+            <h1> S.I. Simulation </h2>
             <p class="bold"> Ambre Bertrand, Abram Schonfeldt, Ruben Weitzman </p>
         </header>
         
         <main>
-            <p>Inital conditions:</p>
-            <div id="init">
-                <!-- Initial conditions -->
-            </div>
-            <p>Simulation goes below:</p>
-            <div id="simulation">
-                <!-- Simulaiton -->
-            </div>
+            <h2>Inital conditions:</h2>
+            <p>Population size:
+                <span id="size"></span>
+            </p>
+            <p>Amount of movement:
+                <span id="move"></span>
+            </p>
 
-            <p>Empirical trajectories:</p>
-            <div id="empirical">
-                <!-- Empirical trajectories -->
-            </div>
+            <h2>Simulation:</h2>
+            <p id="start"></p>
+            <div id="simulation"></div>
 
-            <p>SI model predictions:</p>
-            <div id="SIpredic">
-                <!-- SI Predictions: -->
-            </div>
+            <div id="output"></div>
 
         </main>
         
 
         <footer>
             <p>
-                <span class="barcode">Website by Ambre Bram and Ruben</span>
+                <span class="barcode">Ambre Bram and Ruben</span>
             </p>
         </footer>
     </body>

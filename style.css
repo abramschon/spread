@@ -1,97 +1,53 @@
-nav {
-    display: flex;
-    border-bottom: 1px solid black;
-  }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  nav li {
-    display: inline-block;
-    padding: 0.5em 2em;
-  }
-  nav a {
-    display: block;
-  }
-  
-  @font-face {
-    font-family: alata;
-    src: url(fonts/Alata/Alata-Regular.ttf);
-  }
-  @font-face {
-    font-family: cormorant_garamond;
-    src: url(fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
-  }
-  @font-face {
-    font-family: cormorant_garamond;
-    src: url(fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf);
-    font-weight: lighter;
-  }
-  @font-face {
-    font-family: cormorant_garamond;
-    src: url(fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf);
-    font-style: italic;
-  }
-  @font-face {
-    font-family: cormorant_garamond;
-    src: url(fonts/Cormorant_Garamond/CormorantGaramond-LightItalic.ttf);
-    font-style: italic;
-    font-weight: lighter;
-  }
-  @font-face {
-    font-family: cutive_mono;
-    src: url(fonts/Cutive_Mono/CutiveMono-Regular.ttf);
-  }
-  @font-face {
-    font-family: libre_barcode_39;
-    src: url(fonts/Libre_Barcode_39_Text/LibreBarcode39Text-Regular.ttf);
-  }
+@font-face {
+  font-family: cormorant_garamond;
+  src: url(fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
 
-  #page {
-    font-family: cormorant_garamond, Baskerville, Garamond, serif;
-    font-size: 120%;
-  }
-  
-  @media screen and (max-width: 800px) {
-    #page {
-      font-size: 100%;
-    }
-  }
-  
-  .barcode {
-    font-family: libre_barcode_39;
-    font-size: 1.2em;
-  }
-  
-  .mono {
-    font-family: cutive_mono;
-  }
-  
-  .bold {
-    color: black;
-  }
-  
-  h1 {
-    border: 1px solid black;
-    font-size: 2em;
-    font-weight: normal;
-  }
-  
-  h2 {
-    font-size: 2em;
-    font-style: italic;
-    font-weight: normal;
-    margin-left: 1em;
-  }
-  
-  p {
-    font-size: 1em;
-    color: #6f6f6f;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-    font-style: italic;
-  }
+@font-face {
+  font-family: cormorant_garamond;
+  src: url(fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: libre_barcode_39;
+  src: url(fonts/Libre_Barcode_39_Text/LibreBarcode39Text-Regular.ttf);
+}
+
+.content {
+  margin-left: 100px;
+}
+
+.barcode {
+  font-family: libre_barcode_39;
+  font-size: 1.2em;
+}
+
+.bold {
+  color: black;
+}
+
+h1 {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 0.5em;
+}
+
+p {
+  font-size: 1em;
+  color: #6f6f6f;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
