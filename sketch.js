@@ -1,12 +1,22 @@
 let chart;
 
 function setup() {
-  var canvas =createCanvas(400, 400);
+  var canvas =createCanvas(1200, 700);
   canvas.parent('empirical');
-  dataX = [[2000, 2000.5, 2001, 2002, 2003, 2004, 2005], [2000, 2001, 2002, 2003, 2004, 2005]]
-  dataY = [[20, 50, 40, 60, 80, 100, 120], [150, 75, 32, 14, 7, 3.5]]
+  let numPts=20;
+  dataX = [[2000, 2000.5, 2001, 2002, 2003, 2004, 2005, 2020], [2000, 2001, 2002, 2003, 2004, 2005]]
+  // dataY = [[0, 1, 2, 3, 4, 5, 6], [0, 1, 2, 3, 4, 5]]
   data = []
-  
+
+
+  for(let i =0; i< numPts; i++){
+   // randomY.push(random(100,300));
+   dataX[0].push(random(2000,2030));
+   dataX[0].sort(function(a, b) {return a - b;});
+   print(dataX[0]);
+  }
+
+
   colors = ['#ff0000', '#5649ff']
   
   lineLabels = ["Infected", "Healthy"]
@@ -14,11 +24,11 @@ function setup() {
   for(let i = 0; i < dataX.length; i++) {
     data.push([])
     for(let j = 0; j < dataX[i].length; j++) {
-      data[i].push(createVector(dataX[i][j], dataY[i][j]))
+      data[i].push(createVector(dataX[i][j], j))
     }
   }
     
-  chart = new LineChart(data, colors, lineLabels, 250, 250, 5, 5, [min(dataX.flat()), max(dataX.flat())], [0, 200]);
+  chart = new LineChart(data, colors, lineLabels, 1200, 700, 0, 0, [min(dataX.flat()), max(dataX.flat())], [0, numPts+1]);
   //[min(dataY.flat()), max(dataY.flat())]
 }
 
