@@ -1,6 +1,7 @@
-let num = 500; // Number of points
+let num = 1000; // Number of points
 let range = 1; // Range of randomness
-let lambda = 0.99; // influence of memory
+let lam_slider; 
+let lambda = 0.9; // influence of memory
 let dist = 10; // closeness of infection
 
 let ax = [];
@@ -13,7 +14,12 @@ let stat = []; // status of ith point
 
 
 function setup() { // Randomly initialise the points
-  createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(1000, 500);
+  canvas.parent('simulation');
+  lam_slider = createSlider(0, 1, 0.5,0.01);
+  lam_slider.position(10, 10);
+  lam_slider.style('width', '80px');
+  
   for ( let i = 0; i < num; i++ ) { 
     ax[i] = random(0, width);
     ay[i] = random(0, height);
@@ -29,8 +35,11 @@ function setup() { // Randomly initialise the points
 
 function draw() {
   background('white'); 
-  move()
-  interact()
+
+  // get slider value
+  lambda = lam_slider.value();
+  move();
+  interact();
  
   // Make coordinates into points
   for ( let i = 0; i < num; i++ ) {
