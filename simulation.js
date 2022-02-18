@@ -17,7 +17,9 @@ function setup() { // Randomly initialise the points
   var canvas = createCanvas(1000, 500);
   canvas.parent('simulation');
   lam_slider = createSlider(0, 1, 0.5,0.01);
-  lam_slider.position(10, 10);
+  lam_slider.parent('init')
+
+  //lam_slider.position(10, 10);
   lam_slider.style('width', '80px');
   
   for ( let i = 0; i < num; i++ ) { 
